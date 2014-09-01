@@ -1,0 +1,25 @@
+{
+    "name": "yeroon/doctrine-fictures-extra-bundle",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "description": "Adds a command to validate, drop and create schema and load fixtures in one go. ",
+    "keywords": ["fixtures", "doctrine-fixtures"],
+    "authors": [
+        {
+            "name": "Jeroen Schouten <jgjschouten@gmail.com>",
+            "homepage": "https://github.com/yeroon/doctrine-fictures-extra-bundle"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Yeroon\\": "/"
+        }
+    },
+    "require": {
+        "php": "~5.4",
+        "symfony/symfony": "~2.4",
+        "doctrine/doctrine-bundle": "~1.2",
+        "doctrine/doctrine-fixtures-bundle": "~2.2"
+    }
+}
+
