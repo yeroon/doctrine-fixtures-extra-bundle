@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+
+    <parameters>
+        <parameter key="yeroon_doctrine_fixtures_extra.warn_user_event_listener.class">Yeroon\Bundle\DoctrineFixturesExtraBundle\EventListener\WarnUserEventListener</parameter>
+        <parameter key="yeroon_doctrine_fixtures_extra.mongo_drop_schema_event_listener.class">Yeroon\Bundle\DoctrineFixturesExtraBundle\EventListener\MongoDropSchemaEventListener</parameter>
+        <parameter key="yeroon_doctrine_fixtures_extra.close_connection_event_listener.class">Yeroon\Bundle\DoctrineFixturesExtraBundle\EventListener\CloseConnectionEventListener</parameter>
+    </parameters>
+
+    <services>
+        <!--events-->
+        <service id="yeroon_doctrine_fixtures_extra.event_listener.warn_user" class="%yeroon_doctrine_fixtures_extra.warn_user_event_listener.class%">
+            <tag name="kernel.event_listener" event="yeroon.doctrine_fixtures_extra.init" method="onExecute" />
+        </service>
+
+        <service id="yeroon_doctrine_fixtures_extra.event_listener.close_connection" class="%yeroon_doctrine_fixtures_extra.close_connection_event_listener.class%">
+            <tag name="kernel.event_listener" event="yeroon.doctrine_fixtures_extra.on_drop_database" method="onExecute" />
+        </service>
+    </services>
+
+</container>
