@@ -12,7 +12,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Yeroon\\": "/"
+            "Yeroon\\Bundle\\DoctrineFixturesExtraBundle\\": "/Yeroon/Bundle/DoctrineFixturesExtraBundle/"
         }
     },
     "require": {
