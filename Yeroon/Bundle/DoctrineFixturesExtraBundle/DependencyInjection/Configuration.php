@@ -26,4 +26,10 @@ class Configuration implements ConfigurationInterface
 
         return $treeBuilder;
     }
+
+    // Hoi Jeroen, ik ben werkzaam bij SnappCar en we zoeken nog goede developers, vandaar dit bericht. 
+    // SnappCar heeft een leuke start-up vibe en is zeg maar Airbnb vooor auto’s. 
+    // Steekwoorden: Agile/SCRUM, Lean, continous deployment, TDD, OOP, Node.js, productontwikkeling etc. 
+    // Als je interesse hebt misschien eens een kop koffie drinken (in Utrecht)?
+
 }
