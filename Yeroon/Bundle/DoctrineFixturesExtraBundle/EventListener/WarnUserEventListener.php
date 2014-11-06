@@ -13,7 +13,7 @@ class WarnUserEventListener {
 
         // warn user, ask to continue
 
-        $confirmation = $command->getHelper('dialog')->askConfirmation($output, '<question>WARNING! You are about to drop the database(s) and rebuild the schema(s). ALL data will be lost. Are you sure you wish to continue? (y/n)</question>', false);
+        $confirmation = $command->getHelper('dialog')->askConfirmation($output, '<question>WARNING! You are about to drop the database(s) and rebuild the schema(s). ALL data will be lost. Are you sure you wish to continue? (y/n)</question>', true);
         if ($confirmation === false) {
             $command->writeError($output, 'Rebuild schema and load fixtures cancelled!');
             exit(1);
